@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--Probando el RelativeLayout no eficiente para responsive-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/labelNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="30sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp" />
+
+        <GridLayout
+            android:id="@+id/gridLayoutPad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:rowCount="4"
+            android:layout_below="@id/labelNumber"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp">
+
+            <Button
+                android:id="@+id/button1"
+                android:text="1"
+                style="@style/PadButton"/>
+
+            <Button
+                android:id="@+id/button2"
+                android:text="2" style="@style/PadButton"/>
+
+            <Button
+                android:id="@+id/button3"
+                android:text="3"
+                style="@style/PadButton"/>
+
+            <Button
+                android:id="@+id/button4"
+                android:text="4"
+                style="@style/PadButton"/>
+
+            <Button
+                android:id="@+id/button5"
+                android:text="5"
+                style="@style/PadButton"/>
+
+            <Button
+                android:id="@+id/button6"
+                android:text="6"
+                style="@style/PadButton"/>
+
+            <Button
+                android:id="@+id/button7"
+                android:text="7"
+                style="@style/PadButton"/>
+
+            <Button
+                android:id="@+id/button8"
+                android:text="8"
+                style="@style/PadButton"/>
+
+            <Button
+                android:id="@+id/button9"
+                android:text="9"
+                style="@style/PadButton"/>
+
+            <Button
+                android:id="@+id/buttonClear"
+                android:text="Borrar"
+                style="@style/PadButton"/>
+
+            <Button
+                android:id="@+id/button0"
+                android:text="0"
+                style="@style/PadButton"/>
+
+        </GridLayout>
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gridLayoutPad"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <RadioButton
+                android:id="@+id/radioButtonMalo"
+                android:text="Malo"
+                android:layout_marginEnd="10dp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"/>
+            <RadioButton
+                android:id="@+id/radioButtonBueno"
+                android:text="Bueno"
+                android:layout_marginEnd="10dp"
+                 android:layout_height="wrap_content"
+                android:layout_width="wrap_content"/>
+            <RadioButton
+                android:id="@+id/radioButtonExcelente"
+                android:text="Excelente"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"/>
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/buttonCalcular"
+            android:text="Calcular Propina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/radioGroup"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            style="@style/PadButton"/>
+
+        <TextView
+            android:id="@+id/labelPropina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Propina: $0.00"
+            android:textSize="20sp"
+            android:layout_below="@id/buttonCalcular"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"/>
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
